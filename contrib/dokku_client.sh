@@ -79,9 +79,6 @@ if [[ ! -z $DOKKU_HOST ]]; then
           echo "!      Dokku remote not added! Do you already have a dokku remote?"
           exit 1
         fi
-        ;;
-    apps:destroy)
-      git remote remove dokku
       ;;
     esac
 
