@@ -77,10 +77,8 @@ if [[ ! -z $DOKKU_HOST ]]; then
           echo "-----> Application name is $appname"
         else
           echo "!      Dokku remote not added! Do you already have a dokku remote?"
-          return
+          exit 1
         fi
-        git push dokku master
-        return $?
         ;;
     apps:destroy)
       git remote remove dokku
